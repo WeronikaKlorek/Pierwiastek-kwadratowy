@@ -1,0 +1,23 @@
+double a = 0;
+double b = 0;
+bool isValid = false;
+
+while (!isValid)
+{
+    Console.WriteLine("Wprowadź wartość do spierwiastkowania:");
+    string input = Console.ReadLine();
+
+    if (double.TryParse(input, out a))
+    {
+        b = Math.Sqrt(a);
+
+        isValid = true;
+    }
+    else
+    {
+        Console.WriteLine("Nieprawidłowa wartość. Wprowadź liczbę ponownie.");
+    }
+}
+Console.WriteLine("Wartość została przypisana do zmiennej a: " + a+"\nWynik pierwiastkowania to: " + b);
+Console.WriteLine("\nNaciśnij dowolny klawisz, aby zakończyć...");
+Console.ReadKey();
